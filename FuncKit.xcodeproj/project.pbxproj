@@ -35,7 +35,7 @@
 		80CF30922008C7F400BB5076 /* ArrowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF30912008C7F400BB5076 /* ArrowsTests.swift */; };
 		80CF30942008C7FD00BB5076 /* FutureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF30932008C7FD00BB5076 /* FutureTests.swift */; };
 		80CF30962008D29C00BB5076 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF30952008D29C00BB5076 /* EitherTests.swift */; };
-		80E593A720074E6600AB6C14 /* FunKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E5939D20074E6600AB6C14 /* FunKit.framework */; };
+		80E593A720074E6600AB6C14 /* FuncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E5939D20074E6600AB6C14 /* FuncKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,16 +56,16 @@
 		80A409B2200755CE00A7D574 /* Future+Zip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+Zip.swift"; sourceTree = "<group>"; };
 		80A409B3200755CE00A7D574 /* Future+Lift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+Lift.swift"; sourceTree = "<group>"; };
 		80A409B4200755CE00A7D574 /* Future+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+Operators.swift"; sourceTree = "<group>"; };
-		80A409B5200755CE00A7D574 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Curry.swift; path = Sources/FunKit/Curry.swift; sourceTree = SOURCE_ROOT; };
+		80A409B5200755CE00A7D574 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Curry.swift; path = Sources/FuncKit/Curry.swift; sourceTree = SOURCE_ROOT; };
 		80A409B7200755CE00A7D574 /* Result+Zip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Zip.swift"; sourceTree = "<group>"; };
 		80A409B8200755CE00A7D574 /* Result+Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Optional.swift"; sourceTree = "<group>"; };
 		80A409B9200755CE00A7D574 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		80A409BA200755CE00A7D574 /* Result+Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Functions.swift"; sourceTree = "<group>"; };
 		80A409BB200755CE00A7D574 /* Result+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Operators.swift"; sourceTree = "<group>"; };
 		80A409BC200755CE00A7D574 /* Result+Lift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Lift.swift"; sourceTree = "<group>"; };
-		80A409BD200755CE00A7D574 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identity.swift; path = Sources/FunKit/Identity.swift; sourceTree = SOURCE_ROOT; };
-		80A409BE200755CF00A7D574 /* Arrows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Arrows.swift; path = Sources/FunKit/Arrows.swift; sourceTree = SOURCE_ROOT; };
-		80A409BF200755CF00A7D574 /* Papply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Papply.swift; path = Sources/FunKit/Papply.swift; sourceTree = SOURCE_ROOT; };
+		80A409BD200755CE00A7D574 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identity.swift; path = Sources/FuncKit/Identity.swift; sourceTree = SOURCE_ROOT; };
+		80A409BE200755CF00A7D574 /* Arrows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Arrows.swift; path = Sources/FuncKit/Arrows.swift; sourceTree = SOURCE_ROOT; };
+		80A409BF200755CF00A7D574 /* Papply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Papply.swift; path = Sources/FuncKit/Papply.swift; sourceTree = SOURCE_ROOT; };
 		80A409C1200755CF00A7D574 /* Deferred.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deferred.swift; sourceTree = "<group>"; };
 		80A409C2200755CF00A7D574 /* Deferred+Zip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Deferred+Zip.swift"; sourceTree = "<group>"; };
 		80A409C3200755CF00A7D574 /* Deferred+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Deferred+Operators.swift"; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 		80CF30912008C7F400BB5076 /* ArrowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowsTests.swift; sourceTree = "<group>"; };
 		80CF30932008C7FD00BB5076 /* FutureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureTests.swift; sourceTree = "<group>"; };
 		80CF30952008D29C00BB5076 /* EitherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
-		80E5939D20074E6600AB6C14 /* FunKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FunKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80E593A620074E6600AB6C14 /* FunKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80E5939D20074E6600AB6C14 /* FuncKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FuncKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80E593A620074E6600AB6C14 /* FuncKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuncKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E593AD20074E6600AB6C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80E593B82007537700AB6C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80E593A720074E6600AB6C14 /* FunKit.framework in Frameworks */,
+				80E593A720074E6600AB6C14 /* FuncKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 				80A409AE200755CE00A7D574 /* Either.swift */,
 			);
 			name = Either;
-			path = Sources/FunKit/Either;
+			path = Sources/FuncKit/Either;
 			sourceTree = SOURCE_ROOT;
 		};
 		80A409AF200755CE00A7D574 /* Future */ = {
@@ -121,7 +121,7 @@
 				80A409B3200755CE00A7D574 /* Future+Lift.swift */,
 			);
 			name = Future;
-			path = Sources/FunKit/Future;
+			path = Sources/FuncKit/Future;
 			sourceTree = SOURCE_ROOT;
 		};
 		80A409B6200755CE00A7D574 /* Result */ = {
@@ -135,7 +135,7 @@
 				80A409BC200755CE00A7D574 /* Result+Lift.swift */,
 			);
 			name = Result;
-			path = Sources/FunKit/Result;
+			path = Sources/FuncKit/Result;
 			sourceTree = SOURCE_ROOT;
 		};
 		80A409C0200755CF00A7D574 /* Deferred */ = {
@@ -147,14 +147,14 @@
 				80A409C4200755CF00A7D574 /* Deferred+Lift.swift */,
 			);
 			name = Deferred;
-			path = Sources/FunKit/Deferred;
+			path = Sources/FuncKit/Deferred;
 			sourceTree = SOURCE_ROOT;
 		};
 		80E5939320074E6600AB6C14 = {
 			isa = PBXGroup;
 			children = (
-				80E5939F20074E6600AB6C14 /* FunKit */,
-				80E593AA20074E6600AB6C14 /* FunKitTests */,
+				80E5939F20074E6600AB6C14 /* FuncKit */,
+				80E593AA20074E6600AB6C14 /* FuncKitTests */,
 				80E5939E20074E6600AB6C14 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,13 +162,13 @@
 		80E5939E20074E6600AB6C14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				80E5939D20074E6600AB6C14 /* FunKit.framework */,
-				80E593A620074E6600AB6C14 /* FunKitTests.xctest */,
+				80E5939D20074E6600AB6C14 /* FuncKit.framework */,
+				80E593A620074E6600AB6C14 /* FuncKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		80E5939F20074E6600AB6C14 /* FunKit */ = {
+		80E5939F20074E6600AB6C14 /* FuncKit */ = {
 			isa = PBXGroup;
 			children = (
 				80A409BE200755CF00A7D574 /* Arrows.swift */,
@@ -181,10 +181,10 @@
 				80A409B6200755CE00A7D574 /* Result */,
 				80E593B72007537600AB6C14 /* Supporting Files */,
 			);
-			path = FunKit;
+			path = FuncKit;
 			sourceTree = "<group>";
 		};
-		80E593AA20074E6600AB6C14 /* FunKitTests */ = {
+		80E593AA20074E6600AB6C14 /* FuncKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				80A409D92007693700A7D574 /* DeferredTests.swift */,
@@ -197,8 +197,8 @@
 				80CF30912008C7F400BB5076 /* ArrowsTests.swift */,
 				80E593AD20074E6600AB6C14 /* Info.plist */,
 			);
-			name = FunKitTests;
-			path = Tests/FunKitTests;
+			name = FuncKitTests;
+			path = Tests/FuncKitTests;
 			sourceTree = "<group>";
 		};
 		80E593B72007537600AB6C14 /* Supporting Files */ = {
@@ -222,9 +222,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		80E5939C20074E6600AB6C14 /* FunKit */ = {
+		80E5939C20074E6600AB6C14 /* FuncKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80E593B120074E6600AB6C14 /* Build configuration list for PBXNativeTarget "FunKit" */;
+			buildConfigurationList = 80E593B120074E6600AB6C14 /* Build configuration list for PBXNativeTarget "FuncKit" */;
 			buildPhases = (
 				80E5939820074E6600AB6C14 /* Sources */,
 				80E5939920074E6600AB6C14 /* Frameworks */,
@@ -235,14 +235,14 @@
 			);
 			dependencies = (
 			);
-			name = FunKit;
+			name = FuncKit;
 			productName = FunKit;
-			productReference = 80E5939D20074E6600AB6C14 /* FunKit.framework */;
+			productReference = 80E5939D20074E6600AB6C14 /* FuncKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		80E593A520074E6600AB6C14 /* FunKitTests */ = {
+		80E593A520074E6600AB6C14 /* FuncKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80E593B420074E6600AB6C14 /* Build configuration list for PBXNativeTarget "FunKitTests" */;
+			buildConfigurationList = 80E593B420074E6600AB6C14 /* Build configuration list for PBXNativeTarget "FuncKitTests" */;
 			buildPhases = (
 				80E593A220074E6600AB6C14 /* Sources */,
 				80E593A320074E6600AB6C14 /* Frameworks */,
@@ -253,9 +253,9 @@
 			dependencies = (
 				80E593A920074E6600AB6C14 /* PBXTargetDependency */,
 			);
-			name = FunKitTests;
+			name = FuncKitTests;
 			productName = FunKitTests;
-			productReference = 80E593A620074E6600AB6C14 /* FunKitTests.xctest */;
+			productReference = 80E593A620074E6600AB6C14 /* FuncKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -279,7 +279,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 80E5939720074E6600AB6C14 /* Build configuration list for PBXProject "FunKit" */;
+			buildConfigurationList = 80E5939720074E6600AB6C14 /* Build configuration list for PBXProject "FuncKit" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -291,8 +291,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80E5939C20074E6600AB6C14 /* FunKit */,
-				80E593A520074E6600AB6C14 /* FunKitTests */,
+				80E5939C20074E6600AB6C14 /* FuncKit */,
+				80E593A520074E6600AB6C14 /* FuncKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -362,7 +362,7 @@
 /* Begin PBXTargetDependency section */
 		80E593A920074E6600AB6C14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 80E5939C20074E6600AB6C14 /* FunKit */;
+			target = 80E5939C20074E6600AB6C14 /* FuncKit */;
 			targetProxy = 80E593A820074E6600AB6C14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -492,11 +492,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/FunKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FuncKit/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocket440.FunKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rocket440.FuncKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -516,11 +516,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/FunKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FuncKit/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocket440.FunKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rocket440.FuncKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -534,9 +534,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B78TD52ZD7;
-				INFOPLIST_FILE = Tests/FunKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/FuncKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocket440.FunKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rocket440.FuncKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -549,9 +549,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B78TD52ZD7;
-				INFOPLIST_FILE = Tests/FunKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/FuncKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocket440.FunKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rocket440.FuncKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -561,7 +561,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		80E5939720074E6600AB6C14 /* Build configuration list for PBXProject "FunKit" */ = {
+		80E5939720074E6600AB6C14 /* Build configuration list for PBXProject "FuncKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80E593AF20074E6600AB6C14 /* Debug */,
@@ -570,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80E593B120074E6600AB6C14 /* Build configuration list for PBXNativeTarget "FunKit" */ = {
+		80E593B120074E6600AB6C14 /* Build configuration list for PBXNativeTarget "FuncKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80E593B220074E6600AB6C14 /* Debug */,
@@ -579,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80E593B420074E6600AB6C14 /* Build configuration list for PBXNativeTarget "FunKitTests" */ = {
+		80E593B420074E6600AB6C14 /* Build configuration list for PBXNativeTarget "FuncKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80E593B520074E6600AB6C14 /* Debug */,

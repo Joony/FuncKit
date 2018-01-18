@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import FunKit
+@testable import FuncKit
 
 class Test {
     let int: Int
