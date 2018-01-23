@@ -21,17 +21,55 @@ end
 ## Hello World
 
 ```swift
+let showImage = 
+    REST.loadImage(urlString:) >=>
+    lift(toFuture: UIImageView.init) >=>
+    lift(toFuture: { PlaygroundPage.current.liveView = $0 }, performOn: .main)
 
-
+showImage("https://s.gravatar.com/avatar/787c39ba729f1e3fffd6352e415037c6?s=80")
 
 ```
+
+
 
 # Good practice
 
 Break your algorithms down in to small steps and create functions for each, then combine your functions using arrows.
 
 
-# Why use this instead of library <img src="http://latex.codecogs.com/svg.latex?x" width="20pt"> 
+# Working with functions
+
+Once your code has been broken down to single responsibility functions, you can compose them together to make a greater, more complex algorithm.
+
+With the function <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20B">, we call <img src="http://latex.codecogs.com/svg.latex?A"> the functions *domain*, and <img src="http://latex.codecogs.com/svg.latex?B"> the functions *co-domain*.  To properly compose two functions we must first ensure that the first functions codomain is compatible with the second functions domain.  
+
+For example, these functions cannot be composed: <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20C%20\to%20D">
+
+## Composition
+
+Given the functions: <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20B%20\to%20C">, you can use the composition operator (`>>>`): 
+
+<p align=center><img src="http://latex.codecogs.com/svg.latex?f%20\,%20\textgreater\textgreater\textgreater%20\,%20g%20\colon%20A%20\to%20C"></p>
+
+
+#### What if my function returns an `Optional`, `Result`, `Deferred`, or `Future`?
+
+To simplify, we'll define `Optional`, `Result`, `Deferred`, and `Future` as <img src="http://latex.codecogs.com/svg.latex?M">.  This is an easy simplification as they all have a `flatMap` function.  As long as both functions use the same <img src="http://latex.codecogs.com/svg.latex?M"> type then they can easily be composed.  Given the functions <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20M%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20B%20\to%20M%20C">, you can use the kleisli composition operator (`>=>`):
+
+<p align=center><img src="http://latex.codecogs.com/svg.latex?f%20\,%20\text{\textgreater=\textgreater}%20\,%20g%20\colon%20A%20\to%20M%20C"></p>
+
+
+#### What if I want to compose a regular function with a function that returns an `Optional`, `Result`, `Deferred`, or `Future`?
+
+Both functions that you want to compose have to be at the same "level."  Given the function <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20B">, you can lift <img src="http://latex.codecogs.com/svg.latex?f"> into the context of <img src="http://latex.codecogs.com/svg.latex?M">:
+
+<p align=center><img src="http://latex.codecogs.com/svg.latex?\text{lift}(f)%20\colon%20A%20\to%20M%20\,%20B"></p>
+
+And given <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20B%20\to%20M%20\,%20C">, you can then use the kleisli composition operator (`>=>`).
+
+<p align=center><img src="http://latex.codecogs.com/svg.latex?\text{lift}(f)%20\,%20\text{\textgreater=\textgreater}%20\,%20g%20\colon%20A%20\to%20M%20\,%20C"></p>
+
+# Why use FuncKit instead of library <img src="http://latex.codecogs.com/svg.latex?x" width="20pt">?
 
 FuncKit, unlike other libraries, is firmly grounded in mathematics. A lot of the concepts used in FuncKit are based on [Category Theory] and their implementation influenced by functional languages like Haskell. This has proven to make the implementation much simpler. Most other libraries out there suffer from unnecessary [feature creep].  FuncKit has no dependancies and doesn't have an opinion on which libraries you prefer.
 
