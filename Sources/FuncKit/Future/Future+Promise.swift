@@ -97,7 +97,7 @@ public class Promise<Wrapped>: Future<Wrapped> {
 }
 
 extension Promise {
-    public convenience init(queue: DispatchQueue = DispatchQueue.global(qos: .background), operation: @escaping (Promise<Wrapped>) -> Void) {
+    public convenience init(queue: DispatchQueue = .global(qos: .background), operation: @escaping (Promise<Wrapped>) -> Void) {
         self.init()
         queue.async { operation(self) }
     }

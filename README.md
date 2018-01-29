@@ -36,25 +36,32 @@ showImage("https://s.gravatar.com/avatar/787c39ba729f1e3fffd6352e415037c6?s=80")
 
 Break your algorithms down in to small steps and create functions for each, then combine your functions using arrows.
 
+# What's so *"functional"* about `Result`, `Deferred`, and `Future`?
+
+`Result`, `Deferred`, and `Future` are special types that all exhibit the same behaviour.  In fact, they exhibit the same behaviour as `Optional` and `Sequence` from the standard library.  All these types have three commonalities:  they "wrap" a value and provide functions to manipulate that value, they provide a `map` method, and they provide a `flatMap` method.
+
+To simplify, we'll refer to any type that has a `map` method as <img src="http://latex.codecogs.com/svg.latex?F">, and any type that has a `flatMap` method as <img src="http://latex.codecogs.com/svg.latex?M">.
 
 # Working with functions
 
 Once your code has been broken down to single responsibility functions, you can compose them together to make a greater, more complex algorithm.
 
-With the function <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20B">, we call <img src="http://latex.codecogs.com/svg.latex?A"> the functions *domain*, and <img src="http://latex.codecogs.com/svg.latex?B"> the functions *co-domain*.  To properly compose two functions we must first ensure that the first functions codomain is compatible with the second functions domain.  
+With the function <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20(A)%20\to%20B">, we call <img src="http://latex.codecogs.com/svg.latex?A"> the function's *domain*, and <img src="http://latex.codecogs.com/svg.latex?B"> the function's *co-domain*.  To properly compose two functions we must first ensure that the first function's co-domain is the same as the second function's domain.  
 
 For example, these functions cannot be composed: <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20C%20\to%20D">
 
 ## Composition
 
-Given the functions: <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20B%20\to%20C">, you can use the composition operator (`>>>`): 
+Given these compatible functions: <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20B%20\to%20C">, you can use the composition operator (`>>>`) to create a new function that includes both computations: 
 
 <p align=center><img src="http://latex.codecogs.com/svg.latex?f%20\,%20\textgreater\textgreater\textgreater%20\,%20g%20\colon%20A%20\to%20C"></p>
 
 
-#### What if my function returns an `Optional`, `Result`, `Deferred`, or `Future`?
+#### What if my functions return an `Optional`, `Result`, `Deferred`, or `Future`?
 
-To simplify, we'll define `Optional`, `Result`, `Deferred`, and `Future` as <img src="http://latex.codecogs.com/svg.latex?M">.  This is an easy simplification as they all have a `flatMap` function.  As long as both functions use the same <img src="http://latex.codecogs.com/svg.latex?M"> type then they can easily be composed.  Given the functions <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20M%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20B%20\to%20M%20C">, you can use the kleisli composition operator (`>=>`):
+Given the functions <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20M%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20B%20\to%20M%20C">, clearly the first function's co-domain ($M B$) doesn't match that of the second function's domain ($B$), but the value inside of the co-domain's $M$ is compatible.  We just have to unwrap that value.
+
+As long as both functions use the same <img src="http://latex.codecogs.com/svg.latex?M"> type then they can easily be composed.  Given the functions <img src="http://latex.codecogs.com/svg.latex?f%20\colon%20A%20\to%20M%20B"> and <img src="http://latex.codecogs.com/svg.latex?g%20\colon%20B%20\to%20M%20C">, you can use the kleisli composition operator (`>=>`):
 
 <p align=center><img src="http://latex.codecogs.com/svg.latex?f%20\,%20\text{\textgreater=\textgreater}%20\,%20g%20\colon%20A%20\to%20M%20C"></p>
 
