@@ -38,7 +38,7 @@ Break your algorithms down in to small steps and create functions for each, then
 
 # What's so *"functional"* about `Result`, `Deferred`, and `Future`?
 
-`Result`, `Deferred`, and `Future` are special types that all exhibit the same behaviour.  In fact, they exhibit the same behaviour as `Optional` and `Sequence` from the standard library.  All these types have three commonalities:  they "wrap" a value and provide functions to manipulate that value, they provide a `map` method, and they provide a `flatMap` method.
+`Result`, `Deferred`, and `Future` are special types that all exhibit the same behaviour.  In fact, they exhibit the same behaviour as `Optional` and `Sequence` from the standard library.  All these types have three commonalities:  they "wrap" a value and provide functions to manipulate that value. Specifically  they provide a `map` and a `flatMap` method.
 
 To simplify, we'll refer to any type that has a `map` method as <img src="http://latex.codecogs.com/svg.latex?F">, and any type that has a `flatMap` method as <img src="http://latex.codecogs.com/svg.latex?M">.
 
