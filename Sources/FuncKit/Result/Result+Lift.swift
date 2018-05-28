@@ -1,5 +1,9 @@
 import Foundation
 
+//public func lift1<A, B>(toResult f: @escaping ((A) -> B)) -> ((Result<A>) -> Result<B>) {
+//    return { f <^> $0 }
+//}
+
 public func lift2<A, B, C>(toResult f: @escaping ((A, B) -> C)) -> ((Result<A>, Result<B>) -> Result<C>) {
     return { curry(f) <^> $0 <*> $1 }
 }

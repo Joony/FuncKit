@@ -13,6 +13,20 @@ public func lift<T, U>(toResult f: @escaping (T) throws -> U) -> ((T) -> Result<
     }
 }
 
+// Optional lifting
+enum ResultError: Error {
+    case foundNil
+}
+
+public func lift<T, U>(optionalToResult f: @escaping (T) -> U?) -> ((T) -> Result<U>) {
+    return { t in
+        guard let u = f(t) else {
+            return .failure(ResultError.foundNil)
+        }
+        return .success(u)
+    }
+}
+
 // Passthrough
 public func passthrough<T>(_ f: @escaping ((T) -> Void)) -> ((T) -> Result<T>) {
     return {

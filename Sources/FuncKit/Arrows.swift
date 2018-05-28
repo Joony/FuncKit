@@ -93,7 +93,8 @@ public func *** <B, C, D, E>(f: @escaping (B) -> C, g: @escaping (D) -> E) -> ((
 }
 
 public func &&& <A, B, C>(f: @escaping (A) -> B, g: @escaping (A) -> C) -> ((A) -> (B, C)) {
-    return { ($0, $0) } >>> f *** g
+//    return { ($0, $0) } >>> f *** g
+    return split >>> f *** g
 }
 
 public func first<A, B, C>(_ f: @escaping (A) -> C) -> ((A, B) -> (C, B)) {

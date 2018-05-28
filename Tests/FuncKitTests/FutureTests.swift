@@ -354,7 +354,7 @@ class FutureTests: XCTestCase {
     }
     
     func createFutureIntClosure(from int: Int) -> Future<Int> {
-        return Promise<Int>() { promise in
+        return .async { promise in
             promise.resolve(value: int, on: .main)
         }
     }
@@ -404,7 +404,7 @@ class FutureTests: XCTestCase {
     }
     
     func createFutureIntClosureFailure(from int: Int) -> Future<Int> {
-        return Promise<Int>() { promise in
+        return .async { promise in
             promise.reject(error: FutureError.failedInt, on: .main)
         }
     }

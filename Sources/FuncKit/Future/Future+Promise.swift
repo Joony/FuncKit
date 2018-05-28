@@ -1,21 +1,43 @@
 import Foundation
 
+var _counter: Int = 0
+var counter: Int {
+    _counter += 1
+    return _counter
+}
+
 public class Future<Wrapped> {
     public typealias ResultType = Result<Wrapped>
     public typealias Completion = (ResultType) -> ()
     
-    fileprivate init() {}
+    private let id: Int
+    
+    fileprivate init() {
+        self.id = counter
+    }
     
     fileprivate var result: ResultType?
     private lazy var completions = [Completion]()
     
     fileprivate func add(completion: @escaping Completion) {
-        self.completions.append(completion)
+        if self.result == nil {
+            self.completions.append(completion)
+        }
         self.result.map(completion)
     }
     
+    var stack: String?
+    var thead: Thread?
     fileprivate func complete(_ result: ResultType) {
-        assert(self.result == nil, "Cannot set result (\(result)). Already completed with previous value (\(self.result!))")
+        if self.result != nil {
+//            print(self, self.id, self.result!, result, Thread.current, self.stack!)
+            return
+        }
+        
+        self.stack = Thread.callStackSymbols.joined(separator: "\n")
+        self.thead = Thread.current
+
+//        assert(self.result == nil, "Cannot set result (\(result)). Already completed with previous value (\(self.result!))")
         self.result = result
         self.completions.forEach { $0(result) }
         self.completions.removeAll()
@@ -34,7 +56,7 @@ public class Future<Wrapped> {
 extension Future {
     @discardableResult public func map<U>(_ f: @escaping (Wrapped) -> U) -> Future<U> {
         let future = Future<U>()
-        self.add(completion: { future.complete($0.map(f)) })
+        self.add { future.complete($0.map(f)) }
         return future
     }
 }
@@ -55,7 +77,12 @@ extension Future {
         self.add(completion: { result in
             switch result {
             case let .success(innerFuture):
-                innerFuture.add(completion: future.complete)
+                innerFuture.add { innerResult in
+                    if future.result != nil {
+                        print("WTF?", self)
+                    }
+                    future.complete(innerResult)
+                }
             case let .failure(error):
                 future.complete(.failure(error))
             }
@@ -92,27 +119,45 @@ public class Promise<Wrapped>: Future<Wrapped> {
     public override init() { super.init() }
     
     public func resolve(value: Wrapped) {
+        if self.result != nil {
+            print("WTF?")
+        }
         self.complete(.success(value))
     }
     
     public func reject(error: Error) {
+        if self.result != nil {
+            print("WTF?")
+        }
         self.complete(.failure(error))
     }
 }
 
 extension Promise {
-    public convenience init(queue: DispatchQueue = .global(qos: .background), operation: @escaping (Promise<Wrapped>) -> Void) {
-        self.init()
-        queue.async { operation(self) }
-    }
-    
     public func resolve(value: Wrapped, on queue: DispatchQueue) {
-        queue.sync { self.complete(.success(value)) }
+        queue.sync {
+            if self.result != nil {
+                print("WTF?")
+            }
+            self.complete(.success(value))
+            
+        }
     }
     
     public func reject(error: Error, on queue: DispatchQueue) {
         queue.sync {
+            if self.result != nil {
+                print("WTF?")
+            }
             self.complete(.failure(error))
         }
+    }
+}
+
+extension Future {
+    public static func async(queue: DispatchQueue = .global(qos: .background), operation: @escaping (Promise<Wrapped>) -> Void) -> Future<Wrapped> {
+        let promise = Promise<Wrapped>()
+        queue.async { operation(promise) }
+        return promise
     }
 }

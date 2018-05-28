@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		804D2586200CED900024EE38 /* PapplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D2585200CED900024EE38 /* PapplyTests.swift */; };
+		804FE3A520BBD802006C10C6 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE39A20BBD802006C10C6 /* Diff.swift */; };
+		804FE3A620BBD802006C10C6 /* Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE39B20BBD802006C10C6 /* Animate.swift */; };
+		804FE3A720BBD802006C10C6 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE39D20BBD802006C10C6 /* REST.swift */; };
+		804FE3A820BBD802006C10C6 /* JSONREST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE39E20BBD802006C10C6 /* JSONREST.swift */; };
+		804FE3A920BBD802006C10C6 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE3A020BBD802006C10C6 /* CoreData.swift */; };
+		804FE3AA20BBD802006C10C6 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE3A120BBD802006C10C6 /* Queue.swift */; };
+		804FE3AB20BBD802006C10C6 /* Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE3A220BBD802006C10C6 /* Void.swift */; };
+		804FE3AC20BBD802006C10C6 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE3A320BBD802006C10C6 /* Tuple.swift */; };
+		804FE3AD20BBD802006C10C6 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE3A420BBD802006C10C6 /* Pipe.swift */; };
 		80A409C5200755CF00A7D574 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A409AE200755CE00A7D574 /* Either.swift */; };
 		80A409C6200755CF00A7D574 /* Future+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A409B0200755CE00A7D574 /* Future+Functions.swift */; };
 		80A409C7200755CF00A7D574 /* Future+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A409B1200755CE00A7D574 /* Future+Promise.swift */; };
@@ -50,6 +59,15 @@
 
 /* Begin PBXFileReference section */
 		804D2585200CED900024EE38 /* PapplyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapplyTests.swift; sourceTree = "<group>"; };
+		804FE39A20BBD802006C10C6 /* Diff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
+		804FE39B20BBD802006C10C6 /* Animate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animate.swift; path = Sources/FuncKit/Animate.swift; sourceTree = SOURCE_ROOT; };
+		804FE39D20BBD802006C10C6 /* REST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
+		804FE39E20BBD802006C10C6 /* JSONREST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONREST.swift; sourceTree = "<group>"; };
+		804FE3A020BBD802006C10C6 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		804FE3A120BBD802006C10C6 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Sources/FuncKit/Queue.swift; sourceTree = SOURCE_ROOT; };
+		804FE3A220BBD802006C10C6 /* Void.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Void.swift; path = Sources/FuncKit/Void.swift; sourceTree = SOURCE_ROOT; };
+		804FE3A320BBD802006C10C6 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tuple.swift; path = Sources/FuncKit/Tuple.swift; sourceTree = SOURCE_ROOT; };
+		804FE3A420BBD802006C10C6 /* Pipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipe.swift; path = Sources/FuncKit/Pipe.swift; sourceTree = SOURCE_ROOT; };
 		80A409AE200755CE00A7D574 /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		80A409B0200755CE00A7D574 /* Future+Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+Functions.swift"; sourceTree = "<group>"; };
 		80A409B1200755CE00A7D574 /* Future+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+Promise.swift"; sourceTree = "<group>"; };
@@ -102,6 +120,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		804FE39920BBD802006C10C6 /* Diff */ = {
+			isa = PBXGroup;
+			children = (
+				804FE39A20BBD802006C10C6 /* Diff.swift */,
+			);
+			name = Diff;
+			path = Sources/FuncKit/Diff;
+			sourceTree = SOURCE_ROOT;
+		};
+		804FE39C20BBD802006C10C6 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				804FE39D20BBD802006C10C6 /* REST.swift */,
+				804FE39E20BBD802006C10C6 /* JSONREST.swift */,
+			);
+			name = REST;
+			path = Sources/FuncKit/REST;
+			sourceTree = SOURCE_ROOT;
+		};
+		804FE39F20BBD802006C10C6 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				804FE3A020BBD802006C10C6 /* CoreData.swift */,
+			);
+			name = "Core Data";
+			path = "Sources/FuncKit/Core Data";
+			sourceTree = SOURCE_ROOT;
+		};
 		80A409AD200755CE00A7D574 /* Either */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,14 +217,22 @@
 		80E5939F20074E6600AB6C14 /* FuncKit */ = {
 			isa = PBXGroup;
 			children = (
+				804FE39B20BBD802006C10C6 /* Animate.swift */,
 				80A409BE200755CF00A7D574 /* Arrows.swift */,
+				804FE39F20BBD802006C10C6 /* Core Data */,
 				80A409B5200755CE00A7D574 /* Curry.swift */,
 				80A409C0200755CF00A7D574 /* Deferred */,
+				804FE39920BBD802006C10C6 /* Diff */,
 				80A409AD200755CE00A7D574 /* Either */,
 				80A409AF200755CE00A7D574 /* Future */,
 				80A409BD200755CE00A7D574 /* Identity.swift */,
 				80A409BF200755CF00A7D574 /* Papply.swift */,
+				804FE3A420BBD802006C10C6 /* Pipe.swift */,
+				804FE3A120BBD802006C10C6 /* Queue.swift */,
+				804FE39C20BBD802006C10C6 /* REST */,
 				80A409B6200755CE00A7D574 /* Result */,
+				804FE3A320BBD802006C10C6 /* Tuple.swift */,
+				804FE3A220BBD802006C10C6 /* Void.swift */,
 				80E593B72007537600AB6C14 /* Supporting Files */,
 			);
 			path = FuncKit;
@@ -265,7 +319,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = FunKit;
 				TargetAttributes = {
 					80E5939C20074E6600AB6C14 = {
@@ -319,6 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				804FE3A520BBD802006C10C6 /* Diff.swift in Sources */,
+				804FE3AD20BBD802006C10C6 /* Pipe.swift in Sources */,
+				804FE3A820BBD802006C10C6 /* JSONREST.swift in Sources */,
 				80A409CC200755CF00A7D574 /* Result+Zip.swift in Sources */,
 				80A409D7200755CF00A7D574 /* Deferred+Operators.swift in Sources */,
 				80A409D5200755CF00A7D574 /* Deferred.swift in Sources */,
@@ -329,16 +386,22 @@
 				80A409C5200755CF00A7D574 /* Either.swift in Sources */,
 				80A409D3200755CF00A7D574 /* Arrows.swift in Sources */,
 				80A409CB200755CF00A7D574 /* Curry.swift in Sources */,
+				804FE3AC20BBD802006C10C6 /* Tuple.swift in Sources */,
 				80A409CF200755CF00A7D574 /* Result+Functions.swift in Sources */,
 				80A409CE200755CF00A7D574 /* Result.swift in Sources */,
 				80A409CD200755CF00A7D574 /* Result+Optional.swift in Sources */,
 				80A409D8200755CF00A7D574 /* Deferred+Lift.swift in Sources */,
 				80A409D6200755CF00A7D574 /* Deferred+Zip.swift in Sources */,
+				804FE3AA20BBD802006C10C6 /* Queue.swift in Sources */,
 				80A409CA200755CF00A7D574 /* Future+Operators.swift in Sources */,
 				80A409D0200755CF00A7D574 /* Result+Operators.swift in Sources */,
 				80A409D4200755CF00A7D574 /* Papply.swift in Sources */,
+				804FE3A720BBD802006C10C6 /* REST.swift in Sources */,
 				80A409C7200755CF00A7D574 /* Future+Promise.swift in Sources */,
+				804FE3AB20BBD802006C10C6 /* Void.swift in Sources */,
 				80A409D2200755CF00A7D574 /* Identity.swift in Sources */,
+				804FE3A620BBD802006C10C6 /* Animate.swift in Sources */,
+				804FE3A920BBD802006C10C6 /* CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +445,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -389,6 +453,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -442,6 +507,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -449,6 +515,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
