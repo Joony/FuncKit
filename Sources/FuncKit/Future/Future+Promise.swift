@@ -24,6 +24,10 @@ public class Future<Wrapped> {
     public func finally(_ f: @escaping Completion) {
         self.add(completion: f)
     }
+    
+    public func onError(_ f: @escaping (Error) -> Void) {
+        self.add { if case let .failure(error) = $0 { f(error) } }
+    }
 }
 
 /// Functor
