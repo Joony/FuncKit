@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800DD24020BFCF2D00B2D5A8 /* Lift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800DD23F20BFCF2D00B2D5A8 /* Lift.swift */; };
 		804D2586200CED900024EE38 /* PapplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D2585200CED900024EE38 /* PapplyTests.swift */; };
 		804FE3A520BBD802006C10C6 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE39A20BBD802006C10C6 /* Diff.swift */; };
 		804FE3A620BBD802006C10C6 /* Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FE39B20BBD802006C10C6 /* Animate.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		800DD23F20BFCF2D00B2D5A8 /* Lift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lift.swift; sourceTree = "<group>"; };
 		804D2585200CED900024EE38 /* PapplyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapplyTests.swift; sourceTree = "<group>"; };
 		804FE39A20BBD802006C10C6 /* Diff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
 		804FE39B20BBD802006C10C6 /* Animate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animate.swift; path = Sources/FuncKit/Animate.swift; sourceTree = SOURCE_ROOT; };
@@ -228,6 +230,7 @@
 				80A409BD200755CE00A7D574 /* Identity.swift */,
 				80A409BF200755CF00A7D574 /* Papply.swift */,
 				804FE3A420BBD802006C10C6 /* Pipe.swift */,
+				800DD23F20BFCF2D00B2D5A8 /* Lift.swift */,
 				804FE3A120BBD802006C10C6 /* Queue.swift */,
 				804FE39C20BBD802006C10C6 /* REST */,
 				80A409B6200755CE00A7D574 /* Result */,
@@ -397,6 +400,7 @@
 				80A409D0200755CF00A7D574 /* Result+Operators.swift in Sources */,
 				80A409D4200755CF00A7D574 /* Papply.swift in Sources */,
 				804FE3A720BBD802006C10C6 /* REST.swift in Sources */,
+				800DD24020BFCF2D00B2D5A8 /* Lift.swift in Sources */,
 				80A409C7200755CF00A7D574 /* Future+Promise.swift in Sources */,
 				804FE3AB20BBD802006C10C6 /* Void.swift in Sources */,
 				80A409D2200755CF00A7D574 /* Identity.swift in Sources */,

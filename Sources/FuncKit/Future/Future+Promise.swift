@@ -1,20 +1,8 @@
 import Foundation
 
-var _counter: Int = 0
-var counter: Int {
-    _counter += 1
-    return _counter
-}
-
 public class Future<Wrapped> {
     public typealias ResultType = Result<Wrapped>
     public typealias Completion = (ResultType) -> ()
-    
-    private let id: Int
-    
-    fileprivate init() {
-        self.id = counter
-    }
     
     fileprivate var result: ResultType?
     private lazy var completions = [Completion]()
@@ -26,18 +14,10 @@ public class Future<Wrapped> {
         self.result.map(completion)
     }
     
-    var stack: String?
-    var thead: Thread?
     fileprivate func complete(_ result: ResultType) {
         if self.result != nil {
-//            print(self, self.id, self.result!, result, Thread.current, self.stack!)
             return
         }
-        
-        self.stack = Thread.callStackSymbols.joined(separator: "\n")
-        self.thead = Thread.current
-
-//        assert(self.result == nil, "Cannot set result (\(result)). Already completed with previous value (\(self.result!))")
         self.result = result
         self.completions.forEach { $0(result) }
         self.completions.removeAll()
@@ -63,24 +43,26 @@ extension Future {
 
 /// Monad
 extension Future {
-    public convenience init(_ value: Wrapped) {
+    public convenience init(_ value: Result<Wrapped>) {
         self.init()
-        self.complete(.success(value))
+        self.complete(value)
+    }
+    
+    public convenience init(_ value: Wrapped) {
+        self.init(.success(value))
     }
     
     @discardableResult public func flatMap<U>(_ f: @escaping (Wrapped) -> Future<U>) -> Future<U> {
         return self.map(f).join()
     }
     
+    // return self.flatMap(identity)
     public func join<U>() -> Future<U> where Wrapped == Future<U> {
         let future = Future<U>()
         self.add(completion: { result in
             switch result {
             case let .success(innerFuture):
                 innerFuture.add { innerResult in
-                    if future.result != nil {
-                        print("WTF?", self)
-                    }
                     future.complete(innerResult)
                 }
             case let .failure(error):
@@ -88,7 +70,6 @@ extension Future {
             }
         })
         return future
-//        return self.flatMap(identity)
     }
 }
 
@@ -119,16 +100,10 @@ public class Promise<Wrapped>: Future<Wrapped> {
     public override init() { super.init() }
     
     public func resolve(value: Wrapped) {
-        if self.result != nil {
-            print("WTF?")
-        }
         self.complete(.success(value))
     }
     
     public func reject(error: Error) {
-        if self.result != nil {
-            print("WTF?")
-        }
         self.complete(.failure(error))
     }
 }
@@ -136,9 +111,6 @@ public class Promise<Wrapped>: Future<Wrapped> {
 extension Promise {
     public func resolve(value: Wrapped, on queue: DispatchQueue) {
         queue.sync {
-            if self.result != nil {
-                print("WTF?")
-            }
             self.complete(.success(value))
             
         }
@@ -146,9 +118,6 @@ extension Promise {
     
     public func reject(error: Error, on queue: DispatchQueue) {
         queue.sync {
-            if self.result != nil {
-                print("WTF?")
-            }
             self.complete(.failure(error))
         }
     }

@@ -1,11 +1,3 @@
-//
-//  Diff.swift
-//  Work
-//
-//  Created by Jonathan McAllister on 19/02/2018.
-//  Copyright © 2018 Jonathan McAlister. All rights reserved.
-//
-
 import Foundation
 
 //public enum DiffStep<T> {

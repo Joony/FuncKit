@@ -1,11 +1,3 @@
-//
-//  Pipe.swift
-//  Work
-//
-//  Created by Jonathan McAllister on 01/02/2018.
-//  Copyright © 2018 Jonathan McAlister. All rights reserved.
-//
-
 import Foundation
 
 precedencegroup PipePrecedenceRight {
